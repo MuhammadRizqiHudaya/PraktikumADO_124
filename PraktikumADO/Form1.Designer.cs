@@ -118,7 +118,7 @@
             // 
             this.btnInsertProdi.Location = new System.Drawing.Point(482, 383);
             this.btnInsertProdi.Name = "btnInsertProdi";
-            this.btnInsertProdi.Size = new System.Drawing.Size(75, 23);
+            this.btnInsertProdi.Size = new System.Drawing.Size(100, 23);
             this.btnInsertProdi.TabIndex = 8;
             this.btnInsertProdi.Text = "Insert Prodi";
             this.btnInsertProdi.UseVisualStyleBackColor = true;
