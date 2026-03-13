@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtHasil = new System.Windows.Forms.TextBox();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,11 +50,22 @@
             this.txtHasil.Size = new System.Drawing.Size(100, 22);
             this.txtHasil.TabIndex = 1;
             // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(98, 317);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(75, 23);
+            this.btnConnect.TabIndex = 2;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.txtHasil);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -67,6 +79,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHasil;
+        private System.Windows.Forms.Button btnConnect;
     }
 }
 
