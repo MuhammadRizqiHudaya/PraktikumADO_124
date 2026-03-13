@@ -113,3 +113,74 @@ namespace PraktikumADO
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void btnHitungDosen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "SELECT COUNT(*) FROM Dosen";
+                cmd = new SqlCommand(query, conn);
+
+                int jumlah = (int)cmd.ExecuteScalar();
+
+                txtHasil.Text = jumlah.ToString();
+                MessageBox.Show("Jumlah Dosen: " + jumlah);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btnUpdateSKS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "UPDATE MataKuliah SET SKS=4 WHERE KodeMK='IF210101'";
+                cmd = new SqlCommand(query, conn);
+
+                int hasil = cmd.ExecuteNonQuery();
+
+                txtHasil.Text = hasil.ToString() + " baris";
+                MessageBox.Show("Update SKS berhasil. Baris terpengaruh: " + hasil);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btnInsertProdi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika')";
+                cmd = new SqlCommand(query, conn);
+
+                int hasil = cmd.ExecuteNonQuery();
+
+                txtHasil.Text = hasil.ToString() + " baris";
+                MessageBox.Show("Insert berhasil. Baris terpengaruh: " + hasil);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+    }
+}
