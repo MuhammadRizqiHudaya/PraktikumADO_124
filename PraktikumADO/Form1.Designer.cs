@@ -33,6 +33,7 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnHitungMhs = new System.Windows.Forms.Button();
             this.btnHitungMK = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,18 +75,29 @@
             // 
             // btnHitungMK
             // 
-            this.btnHitungMK.Location = new System.Drawing.Point(402, 316);
+            this.btnHitungMK.Location = new System.Drawing.Point(404, 317);
             this.btnHitungMK.Name = "btnHitungMK";
             this.btnHitungMK.Size = new System.Drawing.Size(75, 23);
             this.btnHitungMK.TabIndex = 4;
             this.btnHitungMK.Text = "Hitung Mk";
             this.btnHitungMK.UseVisualStyleBackColor = true;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(572, 316);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnHitungMK);
             this.Controls.Add(this.btnHitungMhs);
             this.Controls.Add(this.btnConnect);
@@ -105,6 +117,7 @@
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnHitungMhs;
         private System.Windows.Forms.Button btnHitungMK;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 
