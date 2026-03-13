@@ -21,34 +21,95 @@ namespace PraktikumADO
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Koneksi()
         {
-
+            conn = new SqlConnection(
+                "Data Source=LAPTOP-2TIS9UVD\\RIZQIHUDAYA;" +
+                "Initial Catalog=DBAkademikADO;" +
+                "Integrated Security=True"
+            );
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConnect_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Koneksi();
+                conn.Open();
+                MessageBox.Show("Koneksi ke database berhasil!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnHitungMhs_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
 
+                string query = "SELECT COUNT(*) FROM Mahasiswa";
+                cmd = new SqlCommand(query, conn);
+
+                int jumlah = (int)cmd.ExecuteScalar();
+
+                txtHasil.Text = jumlah.ToString();
+                MessageBox.Show("Jumlah Mahasiswa: " + jumlah);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void btnHitungMK_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
 
+                string query = "SELECT COUNT(*) FROM MataKuliah";
+                cmd = new SqlCommand(query, conn);
+
+                int jumlah = (int)cmd.ExecuteScalar();
+
+                txtHasil.Text = jumlah.ToString();
+                MessageBox.Show("Jumlah Mata Kuliah: " + jumlah);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
-        private void button1_Click_3(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
 
+                string query = "UPDATE Mahasiswa SET Alamat='Yogyakarta' WHERE NIM='23110100001'";
+                cmd = new SqlCommand(query, conn);
+
+                int hasil = cmd.ExecuteNonQuery();
+
+                txtHasil.Text = hasil.ToString() + " baris";
+                MessageBox.Show("Jumlah baris terpengaruh: " + hasil);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
-
-        private void button1_Click_4(object sender, EventArgs e)
-        {
-
-        }
-    }
-}
