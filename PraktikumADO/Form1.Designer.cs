@@ -2,15 +2,8 @@
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
@@ -64,7 +53,7 @@
             this.btnConnect.TabIndex = 2;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
-            this.btnConnect.Click += new System.EventHandler(this.button1_Click);
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnHitungMhs
             // 
@@ -74,7 +63,7 @@
             this.btnHitungMhs.TabIndex = 3;
             this.btnHitungMhs.Text = "Hitung Mhs";
             this.btnHitungMhs.UseVisualStyleBackColor = true;
-            this.btnHitungMhs.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnHitungMhs.Click += new System.EventHandler(this.btnHitungMhs_Click);
             // 
             // btnHitungMK
             // 
@@ -84,6 +73,7 @@
             this.btnHitungMK.TabIndex = 4;
             this.btnHitungMK.Text = "Hitung Mk";
             this.btnHitungMK.UseVisualStyleBackColor = true;
+            this.btnHitungMK.Click += new System.EventHandler(this.btnHitungMK_Click);
             // 
             // btnUpdate
             // 
@@ -93,7 +83,7 @@
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnHitungDosen
             // 
@@ -103,7 +93,7 @@
             this.btnHitungDosen.TabIndex = 6;
             this.btnHitungDosen.Text = "Hitung Dosen";
             this.btnHitungDosen.UseVisualStyleBackColor = true;
-            this.btnHitungDosen.Click += new System.EventHandler(this.button1_Click_3);
+            this.btnHitungDosen.Click += new System.EventHandler(this.btnHitungDosen_Click);
             // 
             // btnUpdateSKS
             // 
@@ -113,6 +103,7 @@
             this.btnUpdateSKS.TabIndex = 7;
             this.btnUpdateSKS.Text = "Update Sks";
             this.btnUpdateSKS.UseVisualStyleBackColor = true;
+            this.btnUpdateSKS.Click += new System.EventHandler(this.btnUpdateSKS_Click);
             // 
             // btnInsertProdi
             // 
@@ -122,7 +113,7 @@
             this.btnInsertProdi.TabIndex = 8;
             this.btnInsertProdi.Text = "Insert Prodi";
             this.btnInsertProdi.UseVisualStyleBackColor = true;
-            this.btnInsertProdi.Click += new System.EventHandler(this.button1_Click_4);
+            this.btnInsertProdi.Click += new System.EventHandler(this.btnInsertProdi_Click);
             // 
             // Form1
             // 
@@ -139,10 +130,9 @@
             this.Controls.Add(this.txtHasil);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "SqlCommand, ExecuteNonQuery, ExecuteScalar";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -158,4 +148,3 @@
         private System.Windows.Forms.Button btnInsertProdi;
     }
 }
-
